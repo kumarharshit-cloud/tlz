@@ -35,7 +35,7 @@ module "virtual_machine" {
 
 variable "bat_parent" {}
 module "bastion" {
-  depends_on = [ module.resource_group, module.virtual_network, module.subnet]
-  source = "../Enviorment/Bastion"
-  bat    = var.bat_parent
+  depends_on = [module.resource_group, module.virtual_network, module.subnet]
+  source     = "../Enviorment/Bastion"
+  bat        = var.bat_parent
 }
